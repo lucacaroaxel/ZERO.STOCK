@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/* importo i font di google.*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* customizzazione del tema di tailwind v4, palette colori molto neutra e pulita */
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-stone-50: #f8f5f2;
+  --color-stone-100: #f1ece7;
+  --color-slate-800: #1e293b;
+  --color-zinc-900: #18181b;
+}
+
+/* stili base globali così non devo confondermi ad aggiungere le classi ovunque nei componenti react */
+@layer base {
+  body {
+    @apply bg-stone-50 text-slate-800 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-zinc-900;
+  }
+}
